@@ -4,7 +4,8 @@ class Content
   end
 
   def tiny
-    @value[0..29]
+    return @value if @value.length <= 30
+    return @value[0..29] + "..."
   end
 
   def to_s
